@@ -30,7 +30,9 @@
     <div>
         <#if usuarioLogado??>
             Olá, ${usuarioLogado.nome}
-            <a href="/logout">Sair</a>
+            <form method="post" action="/logout">
+                <button type="submit">Sair</button>
+            </form>
         <#else>
             <a href="/login">Entrar</a>
         </#if>
