@@ -47,7 +47,7 @@ public class LivroController {
             @RequestParam int ano, @RequestParam double preco,
             HttpSession session, Model model) {
 
-        if (session.getAttribute("usuario") == null) {
+        if (session.getAttribute("usuarioLogado") == null) {
             return "redirect:/login";
         }
 
